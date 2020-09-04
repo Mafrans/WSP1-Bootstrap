@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Roboto+Mono&family=Rubik:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: 'Rubik', sans-serif;
+            }
+
+            
+            /* Text styles */
+
+            h1 {
+                font-weight: 400;
+                letter-spacing: 1px;
+            }
+
+            h5 {
+                color: #292b70;
+            }
+
+            a {
+                color: #000000;
+            }
+
+            small {
+                font-size: 15px;
+            }
+
+
+            /* Header styles */
+
+            header {
+                color: white;
+                background-color: #1c1c49;
+            }
+
+            header p {
+                font-size: 20px;
+                font-weight: 200;
+            }
+
+            header .title {
+                background-color: #0e0f2c;
+            }
+
+            header .title h3 {
+                font-family: 'Open Sans', sans-serif;
+            }
+
+
+            /* Code block styles */
+
+            code {
+                background-color: #f6f9fa;
+                border-bottom: 1px #e7e7e7 solid;
+                color: #000000;
+                font-family: 'Roboto Mono', monospace;
+                display: block;
+                padding: .5rem;
+                line-height: 1.5;
+            }
+
+            i {
+                background-color: #e7e7e7;
+                border-radius: 2px;
+                font-style: initial;
+                font-family: 'Roboto Mono', monospace;
+                font-size: 12px;
+                padding: 2px;
+                vertical-align: text-bottom;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <section class="row pb-4 pt-5 title">
+                <div class="container">
+                    <h3><b>GitHub</b></h3>
+                    <h1>Git Cheat Sheet</h1>
+                </div>
+            </section>
+            <section class="row pt-5 pb-4">
+                <div class="container">
+                    <p>
+                        Git is the open source distributed version control
+                        system that facilitates GitHub activities on your laptop
+                        or desktop. This cheat sheet summarizes commonly used
+                        Git command line instructions for quick reference.
+                    </p>
+                </div>
+            </section>
+        </header>
+
+        <main class="container">
+            <div class="row pb-4">
+                <div class="col-6">
+                    <section class="py-4">
+                        <h5>Install</h5>
+                        <p>
+                            <b>Github for Windows</b><br />
+                            <a
+                                href="https://windows.github.com"
+                                target="_blank"
+                            >
+                                https://windows.github.com
+                            </a>
+                        </p>
+                        <p>
+                            <b>Github for Mac</b><br />
+                            <a href="https://mac.github.com" target="_blank">
+                                https://mac.github.com
+                            </a>
+                        </p>
+                        <p>
+                            <b>Github for All Platforms</b><br />
+                            <a href="https://git-scm.com" target="_blank">
+                                https://git-scm.com
+                            </a>
+                        </p>
+
+                        <p>
+                            <small>
+                                Git distributions for Linux and POSIX systems
+                                are available on the official Git SCM web site.
+                            </small>
+                        </p>
+                    </section>
+                </div>
+                <div class="col-6">
+                    <section class="py-4">
+                        <h5>Create repositories</h5>
+                        <p>
+                            <small>
+                                When starting out with a new repository, you
+                                only need to do it once; either locally, then
+                                push to GitHub, or by cloning an existing
+                                repository
+                            </small>
+                        </p>
+
+                        <code>
+                            <b>$ git init</b><br />
+                            Turn an existing directory into a git repository.
+                        </code>
+                        <code>
+                            <b>$ git clone [url]</b><br />
+                            Clone (download) a repository that already exists on
+                            GitHub, including all of the files, branches and
+                            commits
+                        </code>
+                    </section>
+                </div>
+            </div>
+            <div class="row pb-4">
+                <div class="col-6">
+                    <section class="pb-5">
+                        <h5>Configure tooling</h5>
+                        <p>
+                            <small>
+                                Configure user information for all local
+                                repositories.
+                            </small>
+                        </p>
+                        <code>
+                            <b>$ git config --global user.name "[name]"</b
+                            ><br />
+                            Sets the name you want attached to your commit
+                            transactions
+                        </code>
+                        <code>
+                            <b
+                                >$ git config --global user.email "[email
+                                address]"</b
+                            ><br />
+                            Sets the email you want attached to your commit
+                            transactions
+                        </code>
+                        <code>
+                            <b>$ git config --global color.ui auto</b><br />
+                            Enables helpful colorization of command line output
+                        </code>
+                    </section>
+                </div>
+                <div class="col-6">
+                    <section>
+                        <h5>The .gitignore file</h5>
+                        <p>
+                            <small>
+                                Sometimes it may be a good idea to exclude files
+                                from being tracked with Git. This is typically
+                                done in a special file named <i>.gitignore</i>.
+                                You can find helpful templates for
+                                <i>.gitignore</i> files at
+                                <a
+                                    href="https://github.com/github/gitignore"
+                                    target="_blank"
+                                    >github.com/github/gitignore</a
+                                >.
+                            </small>
+                        </p>
+                    </section>
+                </div>
+            </div>
+            <div class="row pb-4">
+                <div class="col-6">
+                    <section>
+                        <h5>Branches</h5>
+                        <p>
+                            <small>
+                                Branches are an important part of working with
+                                Git. Any commits you make will be made on the
+                                branch you're currently "checked out" to. Use
+                                <i>git status</i> to see which branch that
+                                is.
+                            </small>
+                        </p>
+
+                        <code>
+                            <b>$ git branch [branch-name]</b><br />
+                            Creates a new branch
+                        </code>
+                        <code>
+                            <b>$ git checkout [branch-name]</b><br />
+                            Switches to the specified branch and updates the
+                            working directory
+                        </code>
+                        <code>
+                            <b>$ git merge [branch]</b><br />
+                            Combines the specified branch's history into the
+                            current branch. This is usually done in pull
+                            requests, but is an important Git operation.
+                        </code>
+                        <code>
+                            <b>$ git branch -d [branch]</b><br />
+                            Deletes the specified branch
+                        </code>
+                    </section>
+                </div>
+                <div class="col-6">
+                    <section>
+                        <h5>Synchronize Changes</h5>
+                        <p>
+                            <small>
+                                Synchronize your local repository with the
+                                remote repository on
+                                <a href="https://github.com" target="_blank"
+                                    >GitHub.com</a
+                                >
+                            </small>
+                        </p>
+
+                        <code>
+                            <b>$ git fetch</b><br />
+                            Downloads all history from the remote tracking
+                            branches
+                        </code>
+                        <code>
+                            <b>$ git merge</b><br />
+                            Combines remote tracking branch into current local
+                            branch
+                        </code>
+                        <code>
+                            <b>$ git push</b><br />
+                            Uploads all local branch commits to GitHub
+                        </code>
+                        <code>
+                            <b>$ git pull</b><br />
+                            Updates your current local working branch with all
+                            new commits from the corresponding remote branch on
+                            GitHub. <i>git pull</i> is a combination of
+                            <i>git fetch</i> and <i>git merge</i>
+                        </code>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
